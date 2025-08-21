@@ -25,4 +25,4 @@ jobs:
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
             - name: s3 비우기
-              run: aws s3 rn --recursive s3://setup-aws-like-pro
+              run: aws s3 rm --recursive s3://setup-aws-like-pro
