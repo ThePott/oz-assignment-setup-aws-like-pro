@@ -1,0 +1,13 @@
+name: CI/CD to S3 and CloudFront
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    MY_CICD_JOBS:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 작동하는지 확인
+              run: echo "이히히 잘 된다"
