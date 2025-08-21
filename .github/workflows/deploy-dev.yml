@@ -26,3 +26,6 @@ jobs:
 
             - name: s3 비우기
               run: aws s3 rm --recursive s3://dev-setup-aws-like-pro
+
+            - name: s3에 dist 채우기
+              run: aws s3 cp ./dist s3://dev-setup-aws-like-pro --recursive
