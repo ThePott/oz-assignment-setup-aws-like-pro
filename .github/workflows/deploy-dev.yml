@@ -31,4 +31,4 @@ jobs:
               run: aws s3 cp ./dist s3://dev-setup-aws-like-pro --recursive
 
             - name: cloudfront 캐시 무효화
-              run: aws cloudFront create-invalidation --distribution-id E1A30ST3ETNY6L --path "/*"
+              run: aws cloudfront create-invalidation --distribution-id E1A30ST3ETNY6L --path "/*"
