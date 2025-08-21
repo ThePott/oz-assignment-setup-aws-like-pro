@@ -9,5 +9,17 @@ jobs:
     MY_CICD_JOBS:
         runs-on: ubuntu-latest
         steps:
-            - name: 작동하는지 확인
-              run: echo "이히히 잘 된다"
+            - name: 레포 다운 받기
+              uses: actions/checkout@v5
+
+            - name: 의존성 설치 -> 빌드
+              run: |
+                npm install
+                npm run build
+            
+            - name: aws 권한 획득
+              uses: aws-actions/configure-aws-credentials@v4.3.1
+              with:
+                aws-region: ap-northeast-2
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
