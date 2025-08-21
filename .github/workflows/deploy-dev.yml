@@ -1,4 +1,4 @@
-name: CI/CD to S3 and CloudFront
+name: DEV CI/CD to S3 and CloudFront
 
 on:
     push:
@@ -6,7 +6,7 @@ on:
             - develop
 
 jobs:
-    MY_CICD_JOBS:
+    DEV_MY_CICD_JOBS:
         runs-on: ubuntu-latest
         steps:
             - name: 레포 다운 받기
